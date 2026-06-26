@@ -13,5 +13,7 @@ My interpretation is that gold is a conditional hedge, not a permanent one. Ther
 For anyone thinking about portfolio construction or pairs strategies, the z-score framework is worth exploring further. The signal does not always appear, but when it does, it is meaningful
 
 # Running the notebook
+1. Create an API key on massive - https://massive.com
+1. Update your API key in `config.py`
 1. Download data using `download_data.py`
-2. Run gld-spy-hedge.ipynb
+1. Run `gld-spy-hedge.ipynb`
