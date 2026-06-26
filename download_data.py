@@ -11,8 +11,8 @@ def get_data(ticker) -> pd.DataFrame:
         ticker=ticker,
         multiplier=1,
         timespan='day',
-        from_='2026-01-01',
-        to='2026-05-01',
+        from_='2021-06-01',
+        to='2026-06-01',
         limit=50000
     ):
         aggs.append(a)
