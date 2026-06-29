@@ -4,15 +4,20 @@ import pandas as pd
 
 client = RESTClient(API_KEY)
 
-def get_data(ticker) -> pd.DataFrame:
+def get_data(ticker: str, start_date: str = None, end_date: str = None) -> pd.DataFrame:
     aggs = []
+
+    if not start_date:
+        start_date = '2024-01-01'
+    if not end_date:
+        end_date = '2025-12-31'
 
     for a in client.list_aggs(
         ticker=ticker,
         multiplier=1,
         timespan='day',
-        from_='2021-06-01',
-        to='2026-06-01',
+        from_=start_date,
+        to=end_date,
         limit=50000
     ):
         aggs.append(a)
